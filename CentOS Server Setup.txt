@@ -1,0 +1,7 @@
+1. dhclient to request ip
+2. yum install -y httpd
+3. firewall-cmd --permanent --add-port=80/tcp
+4. firewall-cmd --reload
+5. firewall-cmd --query-port=80/tcp (should report 'yes')
+6. systemctl start httpd
+7. systemct status httpd

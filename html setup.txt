@@ -1,0 +1,2 @@
+Location is /var/www/html
+Use vi index.html to create website

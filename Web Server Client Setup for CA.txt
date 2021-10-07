@@ -1,0 +1,6 @@
+!!! ENSURE YOU COME HERE AFTER INITIAL CA SETUP !!!
+
+1. openssl req -newkey rsa:2048 -keyout websrv.key -out websrv.csr
+2. scp username@remotehost:websrv.csr 
+
+!!! MOVE BACK TO CA !!!

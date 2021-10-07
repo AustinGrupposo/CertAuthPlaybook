@@ -1,0 +1,17 @@
+BASIC SETUP
+1. dhclient to request IP
+2. useradd username
+3. passwd username password
+4. firewall-cmd --permanent --add-port=22/tcp
+
+CREATING CA
+1. cd /etc/pki/CA
+2. touch index.txt
+3. echo 1000 > serial
+4. openssl genrsa -des3 -out private/cakey.pem 2048
+5. openssl req -new -x509 -days 365 -key private/cakey.pem -out cacert.pem
+
+!!!NOW MOVE TO WEB SERVER!!!
+
+1. openssl ca -out websrv.crt -infiles websrv.csr
+2. scp username@remotehost:websrv.crt

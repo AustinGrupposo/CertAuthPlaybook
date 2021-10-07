@@ -1,0 +1,11 @@
+!!! ON CENTOS WEBSERVER NOT CA !!!
+
+cp websrv.crt /etc/pki/tls/certs
+cp websrv.key /etc/pki/tls/private
+
+1. yum -y install mod_ssl
+2. updating /etc/httpd/conf.d/ssl.conf
+3. SSlCertificateFile = path/filename of websrv.crt
+4. SSLCertificateKeyFile = path/filename of websrv.key
+5. firewall-cmd --permanent --add-port=443/tcp
+6. systemctl restart httpd

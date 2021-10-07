@@ -1,0 +1,4 @@
+404 - Something doesn't exist
+400 - Invalid syntax
+401 - Unauthorized, identity unknown
+403 - Forbidden, client doesn't have access

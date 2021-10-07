@@ -1,0 +1,6 @@
+sudo restorecon -Rv /etc/pki/tls/certs/
+
+OR
+
+chcon -t cert_t /etc/pki/tls/private/websrv.key
+ls -laZ /etc/pki/tls/private/
